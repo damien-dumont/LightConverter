@@ -188,7 +188,7 @@ server <- function(input, output, session) {
   # Generating plots
   output$plot_light_spectrum <- renderPlot({
     data <- divided_light_spectrum()
-    ggplot(data, aes(x = data[, 1], y = data[, 2])) +
+    ggplot(data, aes(x = data[, 1], y = data[, 2]),size = 1) +
       geom_line() +
       labs(title = "Light Emission Spectrum", y = "Response", x = "Wavelength (nm)")
   })
@@ -200,7 +200,7 @@ server <- function(input, output, session) {
     x1 <- min(light_data[,1])
     x2 <- max(light_data[,1])
     
-    ggplot(data, aes(x = data[, 1], y = data[, 2])) +
+    ggplot(data, aes(x = data[, 1], y = data[, 2]),size = 1) +
       geom_line() +
       labs(title = "First Light Detector Spectrum", y = "Response", x = "Wavelength (nm)") +
       xlim(x1,x2)
@@ -213,7 +213,7 @@ server <- function(input, output, session) {
     x1 <- min(light_data[,1])
     x2 <- max(light_data[,1])
     
-    ggplot(data, aes(x = data[, 1], y = data[, 2])) +
+    ggplot(data, aes(x = data[, 1], y = data[, 2]),size = 1) +
       geom_line() +
       labs(title = "Second Light Detector Spectrum", y = "Response", x = "Wavelength (nm)") +
       xlim(x1,x2)
@@ -224,8 +224,8 @@ server <- function(input, output, session) {
     data2 <- divided_light_spectrum()
     
     ggplot() +
-      geom_line(data = data, aes(x = data[, 1], y = data[, 2])) +
-      geom_line(data = data2, aes(x = data2[,1], y = data2[,2]), color = "blue", alpha = 0.3) +
+      geom_line(data = data, aes(x = data[, 1], y = data[, 2]),size = 1) +
+      geom_line(data = data2, aes(x = data2[,1], y = data2[,2]), color = "darkred", size = 1, alpha = 0.3) +
       labs(title = "Light spectrum x First detector", y = "Response", x = "Wavelength (nm)")
   })
   
@@ -234,8 +234,8 @@ server <- function(input, output, session) {
     data2 <- divided_light_spectrum()
     
     ggplot() +
-      geom_line(data = data, aes(x = data[, 1], y = data[, 2])) +
-      geom_line(data = data2, aes(x = data2[,1], y = data2[,2]), color = "blue", alpha = 0.3) +
+      geom_line(data = data, aes(x = data[, 1], y = data[, 2]),size = 1) +
+      geom_line(data = data2, aes(x = data2[,1], y = data2[,2]), color = "darkred",size = 1, alpha = 0.3) +
       labs(title = "Light spectrum x Second detector", y = "Response", x = "Wavelength (nm)")
   })
   
