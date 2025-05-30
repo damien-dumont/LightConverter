@@ -23,3 +23,7 @@ The files you use must be in .csv and made of 2 columns, the first one indicatin
 Load your datasets using the different buttons, the plot will show up as you load the data. If your light emission spectra is in power units (W/m²/nm), a checkbox is available to convert it to µmol of photons/m²/s, a common unit of light measurement for photosynthetic organisms. 
 
 A "unit response" dataset is provided as an exemple, covering 100-1000nm range with a response of 1. 
+
+# Credits
+
+LightConverter was written by Dumont D. as part of a Master's thesis, supervised by Dr. Leroy B. & Dr Bayon-Vicente G., from the Laboratory of Proteomics and Microbiology, Research Institute for Biosciences, University of Mons, Mons, Belgium.
